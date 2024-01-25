@@ -1,3 +1,5 @@
+# Full VPC + EKS + Autoscaler + HorizontalPodAutoscaler
+
 ## Prerequisites
 1. Install and configure aws-cli
 2. Install kubectl
@@ -24,9 +26,9 @@ terraform apply terraform.plan
 
 ## Post Deployment
 1. Configure kubectl
-    a. **Option one**: as part of the deployment a "config" file was created in the same directory (see above). You can use it to execute kubectl commands by using the --kubeconfig <path-to-file>
-    b. **Option two**: you can use the file mentioned in "1.a" and override/merge-to your local ~/.kube/config
-    b. **Option three**: You can execute the below command which will automatically update your ~/.kube/config file with the correct details
+    - **Option one**: as part of the deployment a "config" file was created in the same directory (see above). You can use it to execute kubectl commands by using the --kubeconfig <path-to-file>
+    - **Option two**: you can use the file mentioned in "1.a" and override/merge-to your local ~/.kube/config
+    - **Option three**: You can execute the below command which will automatically update your ~/.kube/config file with the correct details
 ```bash
 aws eks --region $(terraform output -raw aws_region) update-kubeconfig --name $(terraform output -raw eks_cluster_name)
 ```
