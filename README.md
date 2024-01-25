@@ -7,12 +7,11 @@
 4. Install jq
 
 ## Pre Deployment
-- Navigate to the following directory
+1. Navigate to the following directory
 ```bash
 cd terraform/env/aktimize
 ```
-
-- Fill in all the relevant values in the **variables.tfvars** file
+2. Fill in all the relevant values in the **variables.tfvars** file
 
 ## Deployment
 ```bash
